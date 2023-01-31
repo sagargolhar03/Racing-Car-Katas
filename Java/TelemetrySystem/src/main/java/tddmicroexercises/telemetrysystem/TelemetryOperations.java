@@ -1,11 +1,11 @@
 package tddmicroexercises.telemetrysystem;
 
-public class TelemetryOperations implements TelemetryOpsInterface {
+public class TelemetryOperations implements Operations {
 
 
     private final String DiagnosticChannelConnectionString = "*111#";
 
-    TelemetryDiagnosticInterface telemetryDiagnostic = new TelementryDiagnosticControlsImpl();
+    DiagnosticControls telemetryDiagnostic = new TelementryDiagnosticControlss();
     private String diagnosticInfo = "";
 
 

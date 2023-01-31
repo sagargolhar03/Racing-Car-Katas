@@ -1,12 +1,12 @@
 package tddmicroexercises.telemetrysystem;
 
-public class TelementryDiagnosticControlsImpl implements TelemetryDiagnosticInterface {
+public class TelementryDiagnosticControlss implements DiagnosticControls {
 
 
     private final TelemetryClient telemetryClient;
 
 
-    public TelementryDiagnosticControlsImpl() {
+    public TelementryDiagnosticControlss() {
         this.telemetryClient = new TelemetryClient();
         ;
     }

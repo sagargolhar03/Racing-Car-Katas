@@ -7,11 +7,11 @@ import org.junit.jupiter.api.TestInstance;
 
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-public class TelemetryDiagnosticControlsTest
+public class DiagnosticControlsControlsTest
 {
 
 
-    TelemetryOpsInterface objectUnderTest;
+    Operations objectUnderTest;
 
 
     @BeforeAll

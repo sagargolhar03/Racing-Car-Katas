@@ -1,6 +1,6 @@
 package tddmicroexercises.telemetrysystem;
 
-public interface TelemetryOpsInterface {
+public interface Operations {
 
     void checkTransmission() throws Exception;
 

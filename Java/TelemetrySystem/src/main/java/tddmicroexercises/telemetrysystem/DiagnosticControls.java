@@ -1,6 +1,6 @@
 package tddmicroexercises.telemetrysystem;
 
-public interface TelemetryDiagnosticInterface {
+public interface DiagnosticControls {
 
     public TelemetryClient getTelemetryClient();
 
