@@ -1,6 +1,6 @@
 package tddmicroexercises.telemetrysystem;
 
-public class TelementryDiagnosticControlsImpl implements TelemetryDiagnosticInterface {
+public class TelementryDiagnosticControlsImpl implements TelemetryDiagnosticInterface, TelemetryOpsInterface {
 
     private final String DiagnosticChannelConnectionString = "*111#";
 

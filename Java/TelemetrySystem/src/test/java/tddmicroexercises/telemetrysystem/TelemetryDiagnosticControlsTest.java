@@ -11,7 +11,7 @@ public class TelemetryDiagnosticControlsTest
 {
 
 
-    TelemetryDiagnosticInterface objectUnderTest;
+    TelemetryOpsInterface objectUnderTest;
 
     @BeforeAll
     public void setUp(){

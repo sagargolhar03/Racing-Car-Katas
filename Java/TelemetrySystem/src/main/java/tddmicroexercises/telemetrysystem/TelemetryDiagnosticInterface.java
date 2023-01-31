@@ -7,7 +7,5 @@ public interface TelemetryDiagnosticInterface {
     public void disconnect();
 
 
-    void checkTransmission() throws Exception;
 
-    Object getDiagnosticInfo();
 }
