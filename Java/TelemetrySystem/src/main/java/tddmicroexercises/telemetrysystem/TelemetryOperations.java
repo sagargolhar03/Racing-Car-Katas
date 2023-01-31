@@ -3,11 +3,14 @@ package tddmicroexercises.telemetrysystem;
 public class TelemetryOperations implements Operations {
 
 
-    private final String DiagnosticChannelConnectionString = "*111#";
+    private final String DiagnosticChannelConnectionString;
 
     DiagnosticControls telemetryDiagnostic = new TelementryDiagnosticControlss();
     private String diagnosticInfo = "";
 
+    public TelemetryOperations() {
+        DiagnosticChannelConnectionString = "*111#";
+    }
 
     @Override
     public void checkTransmission() throws Exception {
@@ -30,11 +33,7 @@ public class TelemetryOperations implements Operations {
     }
 
     @Override
-    public Object getDiagnosticInfo() {
+    public String getDiagnosticInfo() {
         return diagnosticInfo;
-    }
-
-    public void setDiagnosticInfo(String diagnosticInfo) {
-        this.diagnosticInfo = diagnosticInfo;
     }
 }
