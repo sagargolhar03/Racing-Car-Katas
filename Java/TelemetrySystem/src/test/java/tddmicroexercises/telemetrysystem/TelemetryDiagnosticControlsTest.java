@@ -11,12 +11,12 @@ public class TelemetryDiagnosticControlsTest
 {
 
 
-    TelemetryDiagnosticControls objectUnderTest;
+    TelemetryDiagnosticInterface objectUnderTest;
 
     @BeforeAll
     public void setUp(){
 
-        objectUnderTest = new TelemetryDiagnosticControls();
+        objectUnderTest = new TelementryDiagnosticControlsImpl();
     }
 
 	@Test
