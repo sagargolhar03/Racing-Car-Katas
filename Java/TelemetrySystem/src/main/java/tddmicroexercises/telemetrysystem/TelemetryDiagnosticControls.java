@@ -2,7 +2,7 @@ package tddmicroexercises.telemetrysystem;
 
 public class TelemetryDiagnosticControls
 {
-    private final String DiagnosticChannelConnectionString = "*111#";
+    private final String DiagnosticChannelConnectionString;
     
     private final TelemetryClient telemetryClient;
     private String diagnosticInfo = "";
@@ -10,6 +10,7 @@ public class TelemetryDiagnosticControls
         public TelemetryDiagnosticControls()
         {
             telemetryClient = new TelemetryClient();
+            DiagnosticChannelConnectionString = "*111#";
         }
         
         public String getDiagnosticInfo(){
