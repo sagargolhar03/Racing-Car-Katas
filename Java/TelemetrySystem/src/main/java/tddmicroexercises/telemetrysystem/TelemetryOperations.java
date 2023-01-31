@@ -5,11 +5,15 @@ public class TelemetryOperations implements Operations {
 
     private final String DiagnosticChannelConnectionString;
 
-    DiagnosticControls telemetryDiagnostic = new TelementryDiagnosticControlss();
+    private final DiagnosticControls telemetryDiagnostic;
+    private final Client telemetryClient;
     private String diagnosticInfo = "";
 
-    public TelemetryOperations() {
+    public TelemetryOperations(DiagnosticControls telemetryDiagnostic, Client telemetryClient) {
+        this.telemetryDiagnostic = telemetryDiagnostic;
+        this.telemetryClient = telemetryClient;
         DiagnosticChannelConnectionString = "*111#";
+
     }
 
     @Override
@@ -19,17 +23,17 @@ public class TelemetryOperations implements Operations {
         telemetryDiagnostic.disconnect();
 
         int retryLeft = 3;
-        while (telemetryDiagnostic.getTelemetryClient().getOnlineStatus() == false && retryLeft > 0) {
+        while (telemetryDiagnostic.getOnlineStatus() == false && retryLeft > 0) {
             telemetryDiagnostic.connect(DiagnosticChannelConnectionString);
             retryLeft -= 1;
         }
 
-        if (telemetryDiagnostic.getTelemetryClient().getOnlineStatus() == false) {
+        if (telemetryDiagnostic.getOnlineStatus() == false) {
             throw new Exception("Unable to connect.");
         }
 
-        telemetryDiagnostic.getTelemetryClient().send(TelemetryClient.DIAGNOSTIC_MESSAGE);
-        diagnosticInfo = telemetryDiagnostic.getTelemetryClient().receive();
+        telemetryClient.send(TelemetryClient.DIAGNOSTIC_MESSAGE);
+        diagnosticInfo = telemetryClient.receive();
     }
 
     @Override

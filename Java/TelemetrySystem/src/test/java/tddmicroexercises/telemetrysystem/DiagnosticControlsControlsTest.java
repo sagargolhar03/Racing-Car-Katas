@@ -13,11 +13,16 @@ public class DiagnosticControlsControlsTest
 
     Operations objectUnderTest;
 
+    DiagnosticControls telemetryDiagnostic;
+    Client telemetryClient;
+
 
     @BeforeAll
     public void setUp(){
 
-        objectUnderTest = new TelemetryOperations();
+        telemetryDiagnostic = new TelementryDiagnosticControls();
+        telemetryClient = new TelemetryClient();
+        objectUnderTest = new TelemetryOperations(telemetryDiagnostic, telemetryClient);
     }
 
 	@Test
